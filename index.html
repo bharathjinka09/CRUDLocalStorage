@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+</head>
+
+<body onload="listar()">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Documento</label>
+                    <input type="text" class="form-control" id="txtDocumento">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Nombre</label>
+                    <input type="text" class="form-control" id="txtNombre">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Correo</label>
+                    <input type="email" class="form-control" id="txtCorreo">
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="form-group">
+                    <label for="">Color</label>
+                    <input type="color" class="form-control" id="txtColor">
+                </div>
+            </div>
+            <input type="hidden" id="txtId">
+            <div class="col-12">
+                <button id="btnGuardar" type="button" class="btn btn-success float-right" onclick="guardar()">Guardar</button>
+                <button id="btnModificar" style="display:none" type="button" class="btn btn-warning float-right" onclick="modificar()">Modificar</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Documento</th>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Color</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tblDatos">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/app3.js"></script>
+</body>
+
+</html>
